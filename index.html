@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planned Planthood</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+    <header class="header">
+        <!-- Left half: Hand image and logo -->
+        <section class="header">
+            <section class="header_left">
+                <img src="assets/images/hand.jpeg" alt="Hand Image" class="header_image" />
+                <img src="assets/icons/Logo.svg" alt="Logo" class="header_logo" />
+            </section>
+            <section class="header_right">
+                <!-- Seedling Icon -->
+                <section class="header_icon seedling-icon">
+                    <img src="assets/icons/seedling.svg" alt="Seedling Icon" />
+                </section>
+                <!-- Dig Icon -->
+                <section class="header_icon dig-icon">
+                    <img src="assets/icons/dig.svg" alt="Dig Icon" />
+                </section>
+            </section>
+        </section>
+    </header>
+
+    <main class="main-content">
+        <!-- navigation options -->
+        <nav class="header__nav">
+            <ul class="nav__list">
+                <li><a href="#">Planer</a></li>
+                <li><a href="#">Historik</a></li>
+                <li><a href="#">Tips</a></li>
+                <li><a href="#">Logga in</a></li>
+            </ul>
+        </nav>
+
+        <!-- Planned Plathood Section -->
+        <section class="Seed">
+            <!-- Title centered at the top -->
+            <h1 class="PPS_title">PLANNED PLANTHOOD</h1>
+
+            <section class="PPS__content">
+                <!-- Left side: SVG inside a circle -->
+                <section class="PPS_left">
+                    <figure class="circle_container">
+                        <img src="assets/icons/Vectorseedpackage.svg" alt="Hand holding plant" class="seed_image">
+                    </figure>
+                </section>
+                <!-- Right side: Header, Text, and Button -->
+                <section class="PPS_right">
+                    <p class="PPS_header">Säsong att så</p>
+                    <p class="PPS_text">Våren är äntligen här i kollektivet!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Vitae quaerat tempora culpa aliquid? Vel, id? 
+                        Laborum tempora commodi sunt, culpa deleniti dolor. 
+                        Voluptas facilis assumenda tempore sed aliquid nihil quasi?</p>
+                    <button class="tips_btn">SÅ- TIPS</button>
+                </section>
+            </section>
+        </section>
+
+        <!-- Plant Listings -->
+        <section class="plant-list">
+            <!-- Line above the section -->
+            <section class="line">
+            </section>
+            <h2 class="plant-list__title">Våra planerade planteringar:</h2>
+
+            <section class="plant-list__grid">
+                <article class="plant-item">
+                    <figure class="plant-item__image-container">
+                        <img src="assets/images/gurka.avif" alt="Gurka" class="plant-item__image">           
+                        <img src="assets/icons/plant.svg" alt="Plant Overlay" class="plant-item__overlay">
+                    </figure>
+                    <!-- Header with Date and Name -->
+                    <header class="plant-item__header">
+                        <p class="plant-item__name">Gurka</p>
+                        <h3 class="plant-item__date">15 April 2024</h3>
+                    </header>
+                    <!-- Footer with Owner and Delete Button -->
+                    <footer class="plant-item__footer">
+                        <p class="plant-item_owner">Rico Coolio</p>
+                        <button class="plant-item_delete_button">TA BORT</button>
+                    </footer>
+                </article>
+
+                <!-- Tomat Item -->
+                <article class="plant-item">
+                    <figure class="plant-item__image-container">
+                        <img src="assets/images/tomater.avif" alt="Tomat" class="plant-item__image">
+                        <img src="assets/icons/plant.svg" alt="Plant Overlay" class="plant-item__overlay">
+                    </figure>
+                    <header class="plant-item__header">
+                        <p class="plant-item__name">Tomat</p>
+                        <h3 class="plant-item__date">1 April 2024</h3>
+                    </header>
+                    <footer class="plant-item__footer">
+                        <p class="plant-item_owner">Jocke</p>
+                        <button class="plant-item_delete_button">TA BORT</button>
+                    </footer>
+                </article>
+                
+                <!-- Tomat Item -->
+                <article class="plant-item">
+                    <figure class="plant-item__image-container">
+                        <img src="assets/images/tomat.avif" alt="Tomat" class="plant-item__image">
+                        <img src="assets/icons/plant.svg" alt="Plant Overlay" class="plant-item__overlay">
+                    </figure>
+                    <header class="plant-item__header">
+                        <p class="plant-item__name">Tomat</p>
+                        <h3 class="plant-item__date">1 April 2024</h3>
+                    </header>
+                    <footer class="plant-item__footer">
+                        <p class="plant-item_owner">Majvor och P-Å</p>
+                        <button class="plant-item_delete_button">TA BORT</button>
+                    </footer>
+                </article>
+
+                <!-- Sockerärtor Item -->
+                <article class="plant-item">
+                    <figure class="plant-item__image-container">
+                        <img src="assets/images/ärta.avif" alt="Sockerärtor" class="plant-item__image">
+                        <img src="assets/icons/plant.svg" alt="Plant Overlay" class="plant-item__overlay">
+                    </figure>
+                    <header class="plant-item__header">
+                        <p class="plant-item__name">Sockerärtor</p>
+                        <h3 class="plant-item__date">15 April 2024</h3>
+                    </header>
+                    <footer class="plant-item__footer">
+                        <p class="plant-item_owner">Frippe</p>
+                        <button class="plant-item_delete_button">TA BORT</button>
+                    </footer>
+                </article>
+
+                <!-- Majrova Item -->
+                <article class="plant-item">
+                    <figure class="plant-item__image-container">
+                        <img src="assets/images/lilagrönsak.avif" alt="Majrova" class="plant-item__image">
+                        <img src="assets/icons/plant.svg" alt="Plant Overlay" class="plant-item__overlay">
+                    </figure>
+                    <header class="plant-item__header">
+                        <p class="plant-item__name">Majrova</p>
+                        <h3 class="plant-item__date">1 April 2024</h3>
+                    </header>
+                    <footer class="plant-item__footer">
+                        <p class="plant-item_owner">Emma på 4an</p>
+                        <button class="plant-item_delete_button">TA BORT</button>
+                    </footer>
+                </article>
+
+                <!-- Squash Item -->
+                <article class="plant-item">
+                    <figure class="plant-item__image-container">
+                        <img src="assets/images/cloesupväxt.avif" alt="Squash" class="plant-item__image">
+                        <img src="assets/icons/plant.svg" alt="Plant Overlay" class="plant-item__overlay">
+                    </figure>
+                    <header class="plant-item__header">
+                        <p class="plant-item__name">Squash</p>
+                        <h3 class="plant-item__date">15 April 2024</h3>
+                    </header>
+                    <footer class="plant-item__footer">
+                        <p class="plant-item_owner">Perra J</p>
+                        <button class="plant-item_delete_button">TA BORT</button>
+                    </footer>
+                </article>
+
+            </section>
+            <button class="plant-item_more-btn">Visa fler</button>
+        </section>
+
+        <!-- Previous Plantings Section -->
+        <section class="previous-plants">
+            <section class="previous-plants__content">
+                <!-- Left side: Title, Text, and Button -->
+                <section class="previous-plants__left">
+                    <h2 class="previous-plants__title">Våra tidigare odlingar</h2>
+                    <p class="previous-plants__text">Våren är äntligen här i kollektivet!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Vitae quaerat tempora culpa aliquid? Vel, id? 
+                        Laborum tempora commodi sunt, culpa deleniti dolor. 
+                        Voluptas facilis assumenda tempore sed aliquid nihil quasi?</p>
+                    <button class="previous-plants_btn">Planterade plantor</button>
+                </section>
+
+                <!-- Right side: Plant SVG inside a circle -->
+                <section class="previous-plants__right ">
+                    <section class="circle__container">
+                    <img src="assets/icons/plant.svg" alt="Previous Plant SVG" class="previous-plants__image">
+                    </section>
+                </section>
+            </section>
+        </section>
+
+        <!-- Contact Us Section -->
+        <section class="contact-us">
+            <!-- Left side with shadow and text -->
+            <section class="contact-us__left">
+                <section class="overlay">
+                    <h2 class="contact-us__title">Vi hörs!</h2>
+                    <section class="contact-info">
+                        <section class="contact-info__item phone">
+                            <img src="assets/icons/telephone.svg" alt="Telephone icon" class="contact-icon" />
+                            <span class="contact-info__text">123-456-7890</span>
+                    </section>
+                    <section class="contact-info__item email">
+                        <img src="assets/icons/envelope.svg" alt="Email icon" class="contact-icon" />
+                        <span class="contact-info__text">email@mail.se</span>
+                    </section>
+                    </section>
+                </section>
+            </section>
+
+            <!-- Right side with logo -->
+            <section class="contact-us__right">
+                <img src="assets/icons/logo.svg" alt="Logo" class="contact-us__logo">
+            </section>
+        </section>
+
+        <!-- Back to top button -->
+        <section class="back-to-top">
+            <button class="to-top_btn">Till toppen av sidan</button>
+        </section>
+    </main>
+
+</body>
+</html>

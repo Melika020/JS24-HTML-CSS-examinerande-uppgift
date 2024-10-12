@@ -1,0 +1,798 @@
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #333;
+    font-size: 16px; /* Default font size for better readability */
+}
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/*/* header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch; /* Ensure both sides stretch to the same height */
+    width: 100%;
+    background-color: white;
+    height: auto; /* Set the height of the header to the full viewport height */
+}
+
+/* Left half: Hand image and Logo */
+.header_left, .header_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Make both sides take equal space */
+    position: relative;
+    height: auto; /* Ensure both sides have full height of the header */
+    width: auto;
+    margin: 0;
+}
+
+/* hand image */
+.header_image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure the image covers the entire left section */
+    display: block;
+}
+
+/* Logo positioning */
+.header_logo {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 270px;
+    height: 50%;
+}
+
+/* Right half: Seedling and Dig Icons */
+.header_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    height: 100%; /* Stretch the right side to the full height */
+    margin-left:0;
+}
+
+/* Right side icons styles */
+.header_icon {
+    flex: 1; /* Icons take equal height */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Specific background colors for each icon */
+.dig-icon {
+    background-color: #187d69;
+}
+
+.seedling-icon {
+    background-color: #8b6043; 
+}
+
+
+
+/*/* Navigation options*/
+.header__nav {
+    background-color: #fff;
+    border-bottom:3px solid #ccc; /* the bottom border */
+    padding: 10px 0;
+}
+
+/* Styles for the navigation list */
+.nav__list {
+    display: flex;
+    justify-content: space-around; /* Evenly distributes space around the items */
+    align-items: center; /* Vertically centers the items */
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for each navigation item */
+.nav__list li {
+    position: relative; 
+    padding: 0 15px; /* Spacing around each navigation link */
+}
+
+/* Link styles */
+.nav__list li a {
+    text-decoration: none; /* Removes underline from the links */
+    font-size: 18px;
+    color:#187d69;
+    text-transform: uppercase; /* Makes the text uppercase as in the image */
+    letter-spacing: 1px; /* Adds some spacing between letters */
+}
+
+/* Add some hover effect */
+.nav__list li a:hover {
+    color: #4CAF50; /* Color change on hover */
+}
+
+
+
+/*/* planned planthood section */
+.Seed {
+    display: flex;
+    flex-direction: column; /* Stack the title and content vertically */
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+    height: 10cm; /* Make section full height */
+    
+}
+
+/* Title centered at the top */
+.PPS_title {
+    font-size: 40px;
+    font-weight: lighter;
+    color: #187d69;
+    text-align: center; /* Centers the title horizontally */
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+/* Left and right container split 50/50 */
+.PPS__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left side: Seed image inside a circle */
+.PPS_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Take up 50% of the width */
+}
+
+.circle_container {
+    width: 300px;
+    height: 300px; /* Circle dimensions */
+    border-radius: 50%;
+    background-color: #187d69;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.seed_image {
+    width: 70%;  /* SVG smaller than the circle */
+    height: 70%;  /* Ensure it fits well inside the circle */
+    object-fit: contain;
+}
+
+/* Right side: Header, Text, and Button */
+.PPS_right {
+    flex: 1; /* Take up 50% of the width */
+    display: flex;
+    flex-direction: column; /* Stack header, text, and button vertically */
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px; /* Add padding to the right side */
+}
+
+/* Header and Text Styles on the Right */
+.PPS_header {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.PPS_text {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Style the Button */
+.tips_btn {
+    padding: 10px 20px;
+    background-color: #187d69;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: auto;
+    position: relative;
+    left: 80%;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+
+
+/*/* Plant Listings */
+.line{
+    border-bottom: 2px solid #187d69;
+    padding-bottom: 20px;
+    width: 30%;
+    margin: 20px auto 0;
+}
+
+.plant-item__image-container {
+    position: relative; /* Create a positioning context for the overlay */
+    width: 100%; /* Ensure it covers the full width */
+    height: 300px; /* Match the height of the plant image */
+    overflow: hidden; /* Prevent overflow of the overlay */
+}
+
+.plant-item__overlay {
+    position: absolute; /* Position the overlay */
+    top: 10%; 
+    left: 10%; 
+    width: 80%; /* Change the size of the overlay */
+    height: 80%; /* Change the size of the overlay */
+    object-fit: contain; /* Ensure it fits within the container */
+    pointer-events: none; /* Allow clicks to go through the overlay */
+    opacity: 0.7;
+}
+
+.plant-list {
+    padding: 20px; /* Add some padding around the section */
+    text-align: center; /* Center the title */
+}
+
+.plant-list__title {
+    font-size: 1.5em;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-weight: lighter;
+}
+
+.plant-list__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    gap: 30px; /* Space between items */
+    justify-items: center;
+}
+
+.plant-item {
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 300px; /* Fixed width */
+    text-align: left;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.5);
+    align-items: center; /* Center items horizontally */
+    padding: 10px; /* Inner padding for content */
+}
+
+/* Plant Item Image - Make it a square */
+.plant-item__image {
+    width: 100%;  /* Ensures it covers the full width of the container */
+    height: 300px; /* Force height to make it square */
+    object-fit: cover; /* Ensures the image maintains aspect ratio while fitting the square */
+}
+
+.plant-item__header, .plant-item__footer {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: space-between; /* Space elements evenly */
+    width: 100%; /* Ensure full width for alignment */
+}
+
+/* Name and Date in One Row */
+.plant-item__header {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.plant-item__name {
+    font-size: 30px;
+    margin: 10px;
+    
+}
+
+.plant-item__date {
+    font-weight: bold; /* Make the date bold */
+    color: #666;
+}
+
+/* Owner and Delete Button in One Row */
+.plant-item__footer {
+    margin-top: auto; /* Push the footer to the bottom */
+    align-items: center;
+}
+
+.plant-item_owner {
+    color: #666;
+    margin-top: auto;
+    font-size: 20px;
+    font-weight: 100;
+}
+
+.plant-item_delete_button {
+    padding: 5px 10px; /* Padding for the button */
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(171, 42, 83); /* Red background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+.plant-item_delete_button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+}
+
+.plant-item_more-btn{
+    padding: 10px 20px;
+    width: auto;
+    background-color: #187d69;
+    color: white;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+
+}
+.plant-item_more-btn:hover {
+    background-color: #21572d;
+    
+}
+
+
+
+
+/*/* Previous Plantings */
+.previous-plants {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #ffffff;
+}
+
+.previous-plants__title {
+    font-size: 40px;
+    font-weight: lighter;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.previous-plants__content {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Left side styles */
+.previous-plants__left {
+    flex: 1; /* Take up 50% of the width */
+    display: flex;
+    flex-direction: column; /* Stack title, text, and button vertically */
+    justify-content: center; /* Center content vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding: 20px; /* Add padding to the left side */
+}
+
+.previous-plants__text {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* Right side styles */
+.previous-plants__right {
+    flex: 1; /* Take up 50% of the width */
+    display: flex;
+    justify-content: center; /* Center the image */
+    align-items: center; /* Center the image vertically */
+}
+
+.circle__container {
+    width: 300px;
+    height: 300px; /* Circle dimensions */
+    border-radius: 50%;
+    background-color: #187d69; /* Background color for the circle */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.previous-plants__image {
+    width: 70%;  /* SVG smaller than the circle */
+    height: 70%;  /* Ensure it fits well inside the circle */
+    object-fit: contain;
+}
+
+.previous-plants_btn {
+    padding: 10px 20px;
+    background-color: #187d69;
+    color: white;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+    margin-top: 50px;
+    position: relative;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Adds shadow */
+    transition: box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+
+
+/*/* Contact Us Section */
+.contact-us {
+    display: flex;
+    height: 500px; /* Set a fixed height */
+    background-image: url('assets/images/handsidan.avif');
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Positioning context for children */
+    overflow: hidden; /* Prevents overflow */
+}
+
+/* Left side with dark overlay */
+.contact-us__left {
+    flex: 1; /* Take up equal space */
+    position: relative; /* Positioning context for overlay */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 85%;  /* Covers half of the picture */
+    background: rgba(0, 0, 0, 0.7); /* Black shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px;
+}
+
+.contact-us__title {
+    font-size: 60px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 120px;
+    margin-left: 170px;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between; /* Pushes phone to the left and email to the right */
+    align-items: center; /* Vertically aligns items */
+    width: 85%; /* Full width of the left half */
+    position: absolute;
+    top: 450px;
+}
+
+.contact-info__item {
+    display: flex;
+    align-items: center;
+}
+
+/* Icon style */
+.contact-icon {
+    width: 30px; /* Adjust icon size */
+    margin-right: 10px; /* Adds space between icon and text */
+}
+
+.contact-info__item.phone {
+    margin-left: 10px;
+    justify-content: flex-start; /* Ensures the phone and icon stay together on the left */
+}
+
+.contact-info__item.email {
+    margin-left: 10px;
+    justify-content: flex-end; /* Ensures the email and icon stay together on the right */
+}
+
+/* Text style */
+.contact-info__text {
+    font-size: 20px;
+    color: white;
+}
+
+/* Right side with logo */
+.contact-us__right {
+    flex: 1; /* Take up equal space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo size */
+.contact-us__logo {
+    max-width: 300px;
+    object-fit: contain;
+}
+
+/* Back to top button */
+.back-to-top {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.to-top_btn {
+    padding: 10px 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: large;
+    font-weight: 100;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+}
+
+
+
+/* Responsive for iPhone 14 Pro Max */
+@media (max-width: 430px) {
+    /* Adjust header layout */
+    .header {
+        flex-direction: column; /* Stack header content vertically */
+        height: auto; /* Allow the height to adjust to content */
+        width: 100%;
+    }
+
+    .header_left, .header_right {
+        flex: none; /* Prevent them from taking up equal space */
+        width: 100%; /* Make each section full-width */
+        height: auto; /* Auto height for better fit */
+    }
+
+    .header_logo {
+        width: 150px; /* Adjust the logo size */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    /* Navigation bar adjustments */
+    .header__nav {
+        border-bottom:3px solid #ccc; /* the bottom border */
+        width: 105%; /* Let the width be determined by content */
+    }
+    .nav__list {
+        flex-direction: row; /* Stack navigation items vertically */
+        align-items: center; /* Align items to the left */
+        margin-left: 5%;
+    }
+
+    /* Adjust content layout in the planned planthood section */
+    .PPS_title {
+        text-align:center; /* Center the content */
+        margin-left: 30px;
+        margin-right: 0;
+        margin-top: 250px;
+        font-size: 30px;
+
+    }
+
+    .PPS_header{
+        margin-left: 120px;
+    }
+
+    .PPS_text {
+        text-align: center;
+        margin-left: 10px;
+    }
+
+    .PPS__content {
+        display: flex; /* Enable flexbox */
+        flex-direction: column-reverse; /* Stack the left and right sections vertically */
+        width: 100%;
+        margin-left: 5%;
+        
+    }
+    .PPS_right{
+        display: flex;
+        text-align: start;
+        flex-direction:column;
+    }
+
+    .PPS_right, .PPS_left {
+        width: 100%; /* Make each section full-width */
+    }
+
+    .circle_container {
+        width: 200px; /* Reduce the size of the circle */
+        height: 200px; /* Maintain the aspect ratio */
+        margin-bottom: 20%;
+    }
+
+
+
+    /*/* Plant listings adjustments */
+    .line{
+        margin-top: 180px;
+        margin-left: 150px;
+    }
+
+    .plant-list__title {
+        font-size: 30px;
+    }
+    .plant-list__grid {
+        grid-template-columns: repeat(2, 1fr); /* double column for small screens */
+        
+    }
+
+    .plant-item__image-container {
+        position: relative; /* Create a positioning context for the overlay */
+        width: 100%; /* Ensure it covers the full width */
+        height: 175px; /* Match the height of the plant image */
+        overflow: hidden; /* Prevent overflow of the overlay */
+    }
+
+    .plant-item {
+        width: 175px; /* Fixed width for consistency */
+        height: auto; /* Allow height to adjust based on content */
+    }
+
+    .plant-item__header, .plant-item__footer {
+        display: flex; /* Use flexbox for alignment */
+        justify-content: space-between; /* Space elements evenly */
+        width: 100%; /* Ensure full width for alignment */
+    }
+    .plant-item__image {
+        width: 100%;  /* Ensures it covers the full width of the container */
+        height: 200px; /* Force height to make it square */
+        object-fit: cover; /* Ensures the image maintains aspect ratio while fitting the square */
+    }
+    
+    /* Name and Date in One Row */
+    .plant-item__header {
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .plant-item__name {
+        font-size: 20px;
+        margin: 10px;
+        margin-left: 0px;
+        
+    }
+
+    .plant-item_owner {
+        margin-top: auto;
+        height: auto;
+        width: auto;
+        font-size: 10px;
+        font-weight: 100;
+    }
+
+    .plant-item_delete_button {
+        max-width: 60%;
+        max-height: 50%;
+        font-size: 10px;
+        margin-top: 10px;
+        margin-bottom: auto;
+    }
+
+
+
+    .plant-item_more-btn{
+        padding: 5px 10px; /* Smaller padding */
+        font-size: 14px; /* Smaller font size */
+        width: 100px; /* Shorter width for small screens */
+        margin-left: 20px;
+        max-width: 30%; /* Ensure it doesn't exceed the screen width */
+    }
+
+    /*/* Previous plantings*/
+    .previous-plants__content {
+        flex-direction: column-reverse;
+    }
+
+    .circle__container {
+        width: 200px; /* Reduce the size of the circle */
+        height: 200px; /* Maintain the aspect ratio */
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+    .previous-plants__right, .previous-plants__left{
+        width: 100%;
+    }
+
+    .previous-plants__title {
+        font-size: 25px;
+        text-align: center;
+    }
+    .previous-plants__left {
+        align-items:center; /* Align items to the left */
+        
+    }
+    .previous-plants__text {
+        margin-bottom: 10px;
+        margin-left: 50px;
+        align-items: center;
+    }
+
+    .previous-plants_btn {
+        padding: 5px 10px;
+        max-width: 50%;
+        margin-left: 20px;
+        
+    }
+
+    
+    /*/* Contact section adjustments */
+    .contact-us {
+        flex-direction:column-reverse; /* Stack the left and right sides vertically */
+        width: 105%;
+        
+    }
+
+    .contact-us__title {
+        margin-bottom: 150px;
+        margin-left: 70px;
+    }
+
+    .contact-us__left, .contact-us__right {
+        width: 100%; /* Full-width sections */
+        height: auto; /* Adjust height based on content */
+        
+    }
+
+    .contact-info {
+        top: 200px; /* Move the contact info higher */
+        right: 170px;
+        flex-direction: row; /* Stack items horizontslly*/
+        
+    }
+
+    .contact-info__item {
+        justify-content: center; /* Center each contact info item */
+        margin-left: 50px;
+        
+    }
+    .contact-info__item.phone {
+        margin-right: 70px;
+        margin-left: 120px;
+        white-space: nowrap; /* makes the phone number appear in one line*/
+    }
+
+    .contact-info__item.email {
+        margin-left: 100px;  
+    }
+
+    /* Icon style */
+    .contact-icon {
+    width: 15px; /* Adjust icon size */
+    }
+
+    .contact-info__text {
+        font-size: 15px;
+        color: white; /* Keep the text color white as per the existing style */
+    }
+
+    .contact-info__item.phone, .contact-info__item.email {
+        justify-content: flex-start; 
+    }
+
+    /* Button adjustments */
+    .hero__btn, .plant-item_more-btn, .previous-plants_btn {
+        width: 100%; /* Make buttons full width */
+        font-size: 1.2em; 
+    }
+}
